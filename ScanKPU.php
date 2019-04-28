@@ -82,7 +82,7 @@ class ScanKPU
 				$number++;	
 				if(isset($fetchKawalPemilu->$number)){
 					$foundNotSameData = $this->compareData($value, $fetchKawalPemilu->$number->sum, $id, $key);
-					if($foundNotSameData)
+					if(!$foundNotSameData)
 					echo "\n[".implode("/", $this->dataWilayah)."] Data sesuai...";
 				}
 			} 
